@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>樂透開獎程式</title>
+
+<style>
+body{
+    background:#e5e5e5;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ball{
+    margin-top:40px;
+}
+
+.ball{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    margin:10px;
+    border-radius:50%;
+    background:#ff6b6b;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+button{
+    margin-top:30px;
+    padding:10px 20px;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="drawLottery()">開始開獎</button>
+<div id="ball"></div>
+
+<script>
+
+function drawLottery(){
+
+    let numbers = [];
+
+    // 產生6個不重複數字
+    while(numbers.length < 6){
+
+        let num = Math.floor(Math.random() * 49) + 1;
+
+        if(!numbers.includes(num)){
+            numbers.push(num);
+        }
+    }
+
+    // 小到大排序
+    numbers.sort(function(a,b){
+        return a - b;
+    });
+
+    // 顯示成圓形球
+    let ballDiv = document.getElementById("ball");
+    ballDiv.innerHTML = "";
+
+    for(let n of numbers){
+        ballDiv.innerHTML += `<div class="ball">${n}</div>`;
+    }
+
+}
+
+</script>
+
+</body>
+</html>

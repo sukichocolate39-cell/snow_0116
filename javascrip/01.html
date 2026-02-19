@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h1>動態刻劃，根據文件流顯示文字</h1>");  // 方法，強制會直接在網頁上寫出內容
+    </script>
+</head>
+<body>
+    <h2>大家好</h2>
+
+    <p><input type="button" value="送出" onclick="showMessage()"></p>
+
+    <div id="message"></div>
+
+    <script>
+        // alert("Hello World");  // 方法，最高權限執行完才會出現其他東西，alert會跳出警告視窗，顯示一段字
+        function showMessage() {
+            document.getElementById("message").innerHTML = "<h3>按鈕被點了</h3>";  // 方法，當按鈕被點擊後，會在網頁上顯示"按鈕被點了"
+            console.log("按鈕被點了")
+        }
+
+    </script>
+</body>
+</html>

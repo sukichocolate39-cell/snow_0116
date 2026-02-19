@@ -1,0 +1,47 @@
+#container{
+    width: 800px;
+    margin: auto;
+}
+
+#header{
+    background-image: url('../images/01.png');
+    height: 235px;
+}
+
+#menuButton{
+    height: 45px;
+    background-image: url('../images/02.png');
+}
+
+#footer{
+    height: 61px;
+    background-image: url('../images/04.png');
+}
+
+#main{
+    background-image: url('../images/03.png');
+    padding: 0 70px;
+}
+
+/* 圖片處理 */
+
+.myPhoto{
+    position: relative;
+    width: 210px;
+    float: left;
+    margin: 0 5px;
+}
+
+.Watermark{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.myPhoto{
+    text-align: center;
+}
+
+#mainB{
+    clear: both;
+}

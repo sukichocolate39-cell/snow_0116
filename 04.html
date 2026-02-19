@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img01 {
+            /* display: none; 真正拿掉直接不見 */
+            /* visibility: hidden; 只是隱藏，使用者看不到，但其實還在位置上 */
+            /* visibility: visible; 就是存在 */
+            /* position: absolute;
+            top: 50px;
+            left: 50px; 絕對定位，跑掉原本的位置，後面的人會接上排隊*/
+            /* position: relative; 相對位置，離開一點點，位置會留下來，後面的人不會接上來排隊 */
+            top: 50px;
+        }
+
+        #img02 {
+            /* position: relative;
+            top: 100px;
+            right: 100px; 用自己現在的位置來移動 */
+        }
+
+        #img03{
+            /* position: fixed;
+            bottom: 0; 固定位置，不管卷軸怎麼拉，永遠都在頁面上的固定位置*/
+        }
+
+        #top{
+            background-color: rgb(28, 207, 252);
+            color: white;
+            border-radius: 100px;
+            width: 100px;
+            text-align: center;
+            padding: 40px 0;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img id="img01" src="web03/images/p1.jpg" alt="" srcset="">
+    <img id="img02" src="web03/images/p2.jpg" alt="" srcset="">
+    <img id="img03" src="web03/images/p3.jpg" alt="" srcset="">
+    <div id="top">TOP</div>
+    <br>
+    style設定：<br>
+    1.  display: none; 真正拿掉直接不見<br>
+    2.  visibility: hidden; 只是隱藏，使用者看不到，但其實還在位置上<br>
+    3.  visibility: visible; 就是存在<br>
+
+</body>
+
+</html>

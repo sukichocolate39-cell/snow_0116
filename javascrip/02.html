@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let x = 2;
+        let y = 3;
+        // var是宣告(舊版，全域變數，讀整棟樓)，現在是let(區域變數，讀房間裡)，可以避免有重複設定，造成程式整個出錯
+        sum(x, y);
+
+        let r = 5;
+        let a = area(r);
+
+        document.write("<br>半徑為" + r + "的面積為" + a.toFixed(2))
+
+        // 宣告常數，可以避免被改變到值
+        const PRICE = 100;
+
+        r = 10;
+        
+        // 無須回傳函數
+        function sum(a, b) {
+            document.write(a + b)
+        }
+
+        // 須回傳函數
+        function area(r) {
+            let a = r * r * Math.PI;
+            return a;
+        }
+
+        // 宣告物件
+        let car = {
+            brand: "Toyota",
+            color: "Red",
+            price: 100000,
+            start: function() {
+                document.write("<br>車子發動了");
+            },
+            stop: function() {
+                document.write("<br>車子停止了");
+            },
+            getPrice: function() {
+                return this.price;
+            },
+            run: function(n) {
+                document.write( `<br>車子在行駛 ${n} 公里了!` )
+            }
+        }
+
+        document.write("<br>車子品牌：" + car.brand);
+        car.brand = "Honda";
+        document.write("<br>車子品牌：" + car.brand);
+        car.start();
+        car.stop();
+        let price = car.price
+        document.write("<br>車子價格：" + price);
+        car.run(50);
+
+        // 陣列，[]指定索引
+        let scores = [85, 95, 90, 70, 71, 69, 97, 65, 75, 82, 70];
+        let sumScores = scores[0] + scores[1] + scores[2] + scores[3] + scores[4] + scores[5] + scores[6] + scores[7] + scores[8] + scores[9] + scores[10];
+        let avgScores = sumScores / scores.length;
+        document.write("<br>總分：" + sumScores);
+        document.write("<br>平均：" + avgScores.toFixed(2));
+        document.write("<br>查詢索引值：" + scores.indexOf(80));
+        document.write("<br>顯示陣列所有內容：" + scores.join(`、`));
+        scores.sort();
+        document.write("<br>字母由小到大排序：" + scores.join());
+        scores.reverse();
+        document.write("<br>字母由大到小排序：" + scores.join());
+        document.write("<br>取得陣列中字串：" + scores.toString());
+        scores.unshift(100);
+        document.write("<br>unshift寫數字在最前面：" + scores.toString());
+        scores.push(40);
+        document.write("<br>push數字寫在最後面：" + scores.toString());
+        scores.shift();
+        document.write("<br>shift是unshift的相反，拿掉最前面的數字：" + scores.toString());
+        scores.pop();
+        document.write("<br>pop是push相反，拿掉最後面的數字：" + scores.toString())
+        let i = 2;
+        i++;
+        document.write("<br>i=" + i);
+        document.write("<br>i=" + i++);
+        document.write("<br>i=" + ++i);
+        let j = '10';   // 設定成文字
+        document.write("<br>i+j=" + (i+j)); // i為數字，j為文字，相加設定無法判斷
+        document.write("<br>i大於j=" + (i>j));
+        document.write("<br>i小於j=" + (i<j));
+        document.write("<br>等於j=" + (i==j));
+        document.write("<br>等於j=" + (i===j)); // i為數字，j為文字，強行等於設定無法判斷
+        
+        
+
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
