@@ -1,0 +1,58 @@
+body{
+    margin: 20px;
+}
+
+#new{
+    width: 385px;
+    margin: auto; /* 至中設定 */
+    background-image: url(../images/t2.jpg);
+}
+
+#new .top{
+    background-image: url(../images/t1.jpg);
+    height: 116px; /* 設定高度(依據你要放的圖片高度內容)才可以顯示出圖片，不然會被擋住 */
+}
+
+#new .footer{
+    background-image: url(../images/t3.jpg);
+    height: 67px; /* 設定高度(依據你要放的圖片高度內容)才可以顯示出圖片，不然會被擋住 */
+}
+
+#new .body{
+    padding: 0 30px; /* 設定左右內距，讓內容不會貼邊 */
+}
+
+#content p{
+    text-indent: 2em;
+    text-align: justify; /* 兩端對齊 */
+}
+
+#content h2{
+    /* border-width: 1px;
+    border-color: black;
+    border-style: solid; */
+    border-bottom: 6px double black; /* 一起設定的框線 */
+    /* double 雙線效果至少要設定3以上，因為是兩條線加起來的像素 */
+}
+
+#content .p1{
+    margin-left: 6em;
+    text-indent: -4em;
+}
+
+#content .p2{
+    margin-left: 8.5em;
+    text-indent: -2.5em;
+}
+
+#sport li {
+    /* list-style-type: "🟡"; */
+    list-style-type: none; /* 取消預設的項目符號 */
+    background-color: cadetblue;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: 5px 0;
+    color: #fff;
+    border-radius: 100px; /* 倒角設定可以製作出圓角效果(上下左右亦可以單獨設定)，當大於形狀的高度，會變成藥丸的形狀 */
+}

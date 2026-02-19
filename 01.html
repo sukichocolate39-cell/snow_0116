@@ -1,0 +1,48 @@
+<!DOCTYPE html>  <!-- 宣告版本是html 5的版本，可以向下開啟以前的版本 -->
+<html lang="zh-Hant"> <!-- 宣告預設網頁的語系(zh-Hant是繁體中文)，現在設定是英文版本的，打開會是英文顯示，但google可以翻譯 -->
+<head>
+    <meta charset="UTF-8"> <!-- UTF-8是資料庫，裡面包含萬國編碼語系，全世界所有文字都在裡面，這裡宣告用的是哪個資料庫 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 設定指定寬度和縮放率(initial-scale=1.0)，參考用，因為現在是做RWD -->
+    <meta name="keywords" content="cat,dog,meow,9980">
+    <meta name="description" content="這是一個測試網站">
+    <title>This is my home</title> <!-- 瀏覽器標籤的文字 -->
+    <!-- Css Only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!-- Javascrip Only -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</head>  <!-- head是不需要給使用者看的，只給瀏覽器看得 -->
+<body style="margin: 50px;background-image: linear-gradient(90deg,rgb(216, 251, 255),rgb(123, 219, 214));">
+    <h1 style="background-color: red; text-align: center; font-size: 42px;font-family: 微軟正黑體;">Hello！Welcome to my webside</h1> <!-- 標題文字，會變粗體字 -->
+    <h2 style="color: red;">ctrl+enter可以直接往下一行新增空白段落，不論你在這一行哪一個位置</h2>
+    <!-- body裡寫給使用者看的 -->
+    <h3 style="color: blue;">按住alt，加上上下鍵，可以上下移動這一行</h3>
+    <p id="p1" title="title滑鼠懸浮於此段上方，會有框框顯示出這段字">ctrl+enter和alt+上下鍵，是兩個很好用的快捷鍵</p>
+    <h3>將一段文字，快速的包在段落裡，ctrl+i 跳出上方對話框，寫下p、h1、h2...等</h3>
+    <p id="p2">今日白天迎風面北部、東半部地區及恆春半島有局部或<b><i>零星短暫雨</i></b>，中南部地區仍為多雲到晴。晚間起降雨範圍逐漸擴大，尤其基隆北海岸、宜蘭地區及大台北山區有廣泛且持續的降雨，並有可能出現局部大雨，新竹以北地區也都有短暫雨，苗栗、花、東及恆春半島則是零星短暫雨，其他地區為多雲到晴的天氣。</p>
+    <p id="p3"><b>b粗體，i斜體，不會跳行，他們會在同一段</b></p>
+    <h4 style="color: rgb(243, 99, 188);">你好，測試顏色，style color可以設定文字顏色</h4>
+    <b>粗體</b> <i>斜體</i>
+    <h5 style="background-color: black;color: white;">backgroung color背景和color前景(文字顏色)，可以一次設定兩個不同樣式style，在分號後面，屬性值都寫在"這裡面"</h5>
+    <p style="text-align: center;">tac這是對齊方式</p>
+    <p style="font-size: 30px;">fz這是字體大小設定</p>
+    <p style="font-family: 微軟正黑體,標楷體;">ff文字家族，文字字體設定方式</p>
+    <p>生命，正因為短暫，才如此沉重；情感，也正因為來不及，才無法被替代。<span style="font-weight: bold;font-style: italic;font-size: 40px;">芙莉蓮的旅程</span>，表面上是踏上新的冒險，實際上卻是一場漫長的回望。她不是在尋找誰，而是在理解——理解那些她當年來不及明白的瞬間，理解時間對不同生命造成的重量差異，也理解什麼叫做「失去之後才開始珍惜」。</p>
+    <p>一串文字中，<span style="color: red;">span可以框起一個詞組</span>，然後設定裡面的一組詞的styl，<span style="font-weight: bold;">快捷鍵fwb，設定粗細</span>、<span style="font-size: 30px;">快捷鍵fz+數字，直接設定字體大小</span>、<span style="font-style: italic;">快捷鍵fsi，設定斜體</span></p>
+    <p>公式：x<sup>2</sup>+y<sup>2</sup>+x<sub>1</sub>+y1=10</p>
+    <p>刪除線，可以用<del>del直接設定</del>，但也可以<span style="text-decoration: overline underline line-through;">用span包裹字體，設定style</span>，可以設定<span style="text-decoration: overline;">上線段</span>，<span style="text-decoration: underline;">下底線</span>，還有<span style="text-decoration: line-through;">中間的刪除線</span></p>
+    <p style="text-decoration: underline;">這是比較常會用到的階段，一整段線條在下面，但其中有幾個字或是一行詞彙，<span style="display: inline-block;">不想要有底線</span>，用span設定框住，display，然後inline-block堵塞，把效果關掉</p>
+    <br>
+    <h3>ol 可以排序的清單，type可以設定要用123還是abc等等</h3>
+    <ol style="list-style-type:lower-roman;"> <!-- 用style可以設定前面顯示的符號 -->
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ol>
+    <h3>ul 沒有排序的清單</h3>
+    <ul style="list-style-image: url(m.gif);"> <!-- 用style可以設定用圖片顯示前面的符號 -->
+        <li>興趣</li>
+        <li>打球</li>
+        <li>旅行</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>多媒體播放</h1>
+    <h2>音樂播放</h2>
+    <!-- 聲音檔格式：mp3、WAV、ODD、wma、rm -->
+    <audio src="media/audio.mp3" controls>您的瀏覽器不支援 audio 元素</audio> 
+    <br>audio：放置音樂檔案
+    <br>controls：顯示控制項（播放、暫停、音量調整等）
+    <h2>影片播放</h2>
+    <!-- 影片檔格式：MP4、AVi、MOV、WMV、MPEG、rmav -->
+    <video src="media/video.mp4" controls></video>
+    <br>video：放置影片檔案
+    <br>controls：顯示控制項（播放、暫停、音量調整等）
+    <H2>嵌入多媒體(沒辦法控制外觀)</H2>
+    利用iframe嵌入外部的多媒體，挖一個洞顯示其他網頁的資訊
+    <h3>soundcloud</h3>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2079981711&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/shaboozey" title="Shaboozey" target="_blank" style="color: #cccccc; text-decoration: none;">Shaboozey</a> · <a href="https://soundcloud.com/shaboozey/amen-feat-jelly-roll" title="Amen" target="_blank" style="color: #cccccc; text-decoration: none;">Amen</a></div>
+    <h3>podcast Apple</h3>
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/tw/podcast/%E6%99%82%E9%96%93%E7%9A%84%E5%A5%B3%E5%85%92-%E5%85%AB%E5%8D%A6%E6%AD%B7%E5%8F%B2/id1549521834"></iframe>
+    <h3>Youtube</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5HzLumhIx6s?si=r8BDu_mRA17kpqeq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3>Vimeo</h3>
+    和youtube相比，這是商業的，不會有廣告，但要自己設定大小
+</body>
+</html>
