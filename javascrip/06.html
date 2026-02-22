@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // javascrip裡面，變數是不定型別的
+        // 用 typeof 檢查變數的類別
+        document.write(typeof "123");
+        document.write(typeof 123 + "<br>");
+        document.write(typeof true + "<br>");
+        document.write(typeof "" + "<br>");
+
+        let x;
+        document.write(typeof x + "<br>");
+        x = 100
+        document.write(typeof x + "<br>")
+        x = "Hello word!"
+        document.write(typeof x + "<br>")
+
+        // Math 數學用物件
+        document.write(Math.PI + "<br>")
+
+        // 日期物件
+        let d = new Date();
+        document.write(d.getFullYear() + "年" + d.getMonth() + "月" + d.getDay() + "日" + "<br>");
+        document.write(d.getHours() + "時" + d.getMinutes() + "分" + d.getSeconds() + "秒");
+
+    </script>
+</body>
+
+</html>
