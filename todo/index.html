@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,112 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <h1>代辦事項</h1>
     代辦事項：<input type="text" id="item">
     期限：<input type="date" id="date">
     <button id="add">新增</button>
-    <table id="list" border="1" cellspacing="0" cellpadding="5" style="margin-top: 20px;">
-    <tr>
-        <th>完成否</th>
-        <th>代辦事項</th>
-        <th>期限</th>
-    </tr>
-    <tr>
-        <td align="center"><input type="checkbox" id="todo_1"></td>
-        <td>預設的代辦事項</td>
-        <td>2026-2-28</td>
-    </tr>
+    <!-- <button id="save">儲存</button> -->
+    <table border="1" cellspacing="0" cellpadding="5" style="margin-top: 20px;">
+        <tr>
+            <th>完成否</th>
+            <th>代辦事項</th>
+            <th>期限</th>
+            <th>操作</th>
+        </tr>
+        <tbody id="list"></tbody>
+        <!-- 代辦事項會顯示在這裡 -->
+
     </table>
 
     <script>
-        $(function() {
+        $(function () {
+            var todos = [];
+            var savedTodos = localStorage.getItem('todos');
+            if (savedTodos) {
+                todos = JSON.parse(savedTodos);
+                todos.sort(function (a, b) { 
+            return new Date(a.date) - new Date(b.date)});
+                todos.forEach(function (todo) {
+                    var newRow = '<tr>' +
+                        '<td align="center">' +
+                        // 透過三元運算子決定 checkbox 是否被勾選, 判斷式?true的值:false的值
+                        '<input type="checkbox" id="todo_' + todo.id + '" ' + (todo.done ? 'checked' : '') + '>' +
+                        '</td>' +
+                        '<td>' + todo.item + '</td>' +
+                        '<td>' + todo.date + '</td>' +
+                        '<td><button class="del" data-id="' + todo.id + '">刪除</button></td>' +
+                        '</tr>';
+                    $('#list').append(newRow);
+                });
+            }
 
+            $('#add').click(function () {
+                var item = $('#item').val();
+                var date = $('#date').val();
+
+                var todo = {
+                    id: Date.now(),
+                    done: false,
+                    item: item,
+                    date: date
+                }
+
+                todos.push(todo);
+
+                todos.sort(function (a, b) {
+                    return new Date(a.date) - new Date(b.date);
+                });
+
+                if (item && date) {
+                    $('#list').empty();
+                    todos.forEach(function (todo) {
+                        var newRow = '<tr>' +
+                            '<td align="center">' +
+                            // 透過三元運算子決定 checkbox 是否被勾選, 判斷式?true的值:false的值
+                            '<input type="checkbox" id="todo_' + todo.id + '" ' + (todo.done ? 'checked' : '') + '>' +
+                            '</td>' +
+                            '<td>' + todo.item + '</td>' +
+                            '<td>' + todo.date + '</td>' +
+                            '<td><button class="del" data-id="' + todo.id + '">刪除</button></td>' +
+                            '</tr>';
+                        $('#list').append(newRow);
+                    });
+
+                    saveTodes();
+
+                } else {
+                    alert('請輸入代辦事項和期限')
+                }
+            });
+
+            function saveTodes() {
+                var dataToSave = JSON.stringify(todos);
+                localStorage.setItem('todos', dataToSave);
+                // alert('代辦事項已儲存');
+            }
+
+            $('#list').on('change', 'input[type=checkbox]', function () {
+                var id = $(this).attr('id').split('_')[1];
+                var todo = todos.find(function (t) { return t.id == id; });
+                if (todo) {
+                    todo.done = $(this).is(':checked');
+                    saveTodes();
+                }
+            });
+
+            $('#list').on('click', '.del', function () {
+                if (confirm('確定要刪除嗎？') == false) {
+                    return;
+                }
+                var id = $(this).data('id');
+                todos = todos.filter(function (t) { return t.id != id; });
+                $(this).closest('tr').remove();
+                saveTodes();
+            })
         })
     </script>
 </body>
+
 </html>

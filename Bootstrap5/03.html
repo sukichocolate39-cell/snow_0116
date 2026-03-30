@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header class="bg-black text-light">
+        <h1 class="display-1 text-center py-5">元件介紹</h1>
+    </header>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <strong>Alert Heading</strong> Alert Content
+    </div>
+
+    <script>
+        window.onload = function () {
+            var alertList = document.querySelectorAll(".alert");
+            alertList.forEach(function (alert) {
+                new bootstrap.Alert(alert);
+            });
+            setTimeout(function () {
+                var alert = document.querySelector(".alert");
+                var bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            }, 5000);
+        };
+    </script>
+    <main>
+        <div class="container py-5">
+            <h2>圖片區</h2>
+            <div class="row">
+                <figure class="figure col-md-4">
+                    <img src="https://picsum.photos/400/208" class="figure-img img-fluid rounded" alt="" />
+                    <figcaption class="figure-caption text-start">
+                        Some Word
+                    </figcaption>
+                </figure>
+                <figure class="figure col-md-4">
+                    <img src="https://picsum.photos/402/207" class="figure-img img-fluid rounded" alt="" />
+                    <figcaption class="figure-caption text-start">
+                        Some Word
+                    </figcaption>
+                </figure>
+                <figure class="figure col-md-4">
+                    <img src="https://picsum.photos/401/206" class="figure-img img-fluid rounded" alt="" />
+                    <figcaption class="figure-caption text-start">
+                        Some Word
+                    </figcaption>
+                </figure>
+                <figure class="figure col-md-4">
+                    <img src="https://picsum.photos/404/209" class="figure-img img-fluid rounded" alt="" />
+                    <figcaption class="figure-caption text-start">
+                        Some Word
+                    </figcaption>
+                </figure>
+            </div>
+            <h2 class="mt-4">超大螢幕</h2>
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <div class="h-100 p-5 text-white bg-primary border rounded-3">
+                        <h2>一周天氣預報/元宵節全台大變天！</h2>
+                        <p>
+                            準備迎接濕冷的一周！根據中央氣象署最新預報，台灣下周將接連受到鋒面、東北季風及華南雲雨區三重夾擊。明（3月1日）起冷空氣雖短暫減弱回溫，但緊接著周一鋒面報到，全台降雨機率增加；特別是周二（3月3日）適逢元宵節，將迎來水氣最豐沛的一天，西半部需防範局部雷雨或較大雨勢，北台灣低溫也將下探
+                            16 度，濕涼體感相當明顯。
+                        </p>
+                        <button class="btn btn-info" type="button">
+                            Example button
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="mt-4">按鈕類</h2>
+            <div class="btn-group btn-group-vertical w-100">
+                <button type="button" class="btn btn-primary">按鈕</button>
+                <a href="https://www.google.com.tw" class="btn btn-outline-primary">google</a>
+                <a href="https://www.google.com.tw" class="btn btn-outline-primary">google</a>
+                <a href="https://www.google.com.tw" class="btn btn-outline-primary">google</a>
+            </div>
+
+            <!-- 滿版網格按鈕 -->
+            <div class="row">
+                <div class="col-md-6 d-grid">
+                    <a href="https://www.google.com.tw" class="btn btn-info disabled">google</a>
+                </div>
+                <div class="col-md-6 d-grid">
+                    <a href="https://www.google.com.tw" class="btn btn-info active">google</a>
+                </div>
+            </div>
+
+            <h2 class="mt-4">下拉選單按鈕</h2>
+            <div class="dropdown open">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Dropdown Button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="triggerId">
+                    <a class="dropdown-item" href="#">Action</button>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item disabled" href="#">
+                            Disabled action
+                            </button>
+                </div>
+            </div>
+            <h2 class="mt-4">徽章</h2>
+            <span class="badge bg-primary">New!</span>
+            <button class="btn btn-primary">
+                Notifications
+                <span class="badge bg-warning">12</span>
+            </button>
+            <a href="#" class="badge bg-primary">可以按的徽章</a>
+            <span class="badge rounded-pill text-bg-danger">圓角藥丸效果徽章</span>
+            <!-- badge 移至右上角 -->
+            <button class="btn btn-success position-relative">
+                LINE
+                <span class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle">2</span>
+            </button>
+            <h2 class="mt-4">分頁</h2>
+            <nav aria-label="Page navigation">
+                <ul class="pagination    ">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <h2 class="mt-4">列表功能</h2>
+            <ul class="list-group">
+                <li class="list-group-item">aaaaaaaaaaaaaaaa</li>
+                <li class="list-group-item">cccccccccccccccc</li>
+                <li class="list-group-item">bbbbbbbbbbbbbbbb</li>
+                <li class="list-group-item">fdssssssssssssss</li>
+            </ul>
+            <h2 class="mt-4">卡片</h2>
+            <div class="row">
+                <div class="card  col-md-4">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="https://picsum.photos/100/180/" alt="Title" />
+                    </div>
+                    <div class="card-footer">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card col-md-4">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="https://picsum.photos/100/180/" alt="Title" />
+                    </div>
+                    <div class="card-footer">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card col-md-4">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <img class="card-img-top img-fluid" src="https://picsum.photos/100/180/" alt="Title" />
+                    </div>
+                    <div class="card-footer">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <h2 class="mt-4">摺疊面板</h2>
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#contentId" aria-expanded="false"
+                        aria-controls="contentId">
+                        Show
+                    </a>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#news" aria-expanded="false"
+                        aria-controls="news">
+                        Show
+                    </a>
+                </p>
+                <div class="collapse" id="contentId">
+                    民政局長劉思遠昨說，市內部分里的人口超過合理負擔或行政區過於龐大，里長與公務單位人力吃緊、不利市政發展，民眾權益也可能受損，該局辦理分里與併里調整作業是確保桃市穩定發展的必要任務，新增里的設備、人力、經費都已到位，無縫銜接基層服務，保障民眾生活不受調整案的影響。
+                    增加的十三里，有桃園區新增藝文、幸福、民有等三里；中壢區新增青航、青園、松嶺等三里；八德區新增大盛里；龜山區新增文藝、文桃、文樂、長樂等四里；大園區原竹圍里併入海口里，新增新南、仁德、竹圍三里，共計增加兩里。
+                </div>
+                <div class="collapse" id="news">
+                    最近在Youtube上瘋傳一段影片，大陸雲南一隻胖橘貓被飼主帶回老家，跟奶奶互動的時候不小心把奶奶抓傷，奶奶非常不開心，但是又不好對毛孫打罵，竟然想到一個厲害的方式來挫挫毛孫的銳氣，只見奶奶拿出佛珠，對躺在貓抓板上的肥貓不斷誦經，貓咪看到奶奶這樣做整隻都嚇傻了，眼睛直勾勾看著誦經的奶奶，就像是在說「朕感覺要被超渡了」。
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
